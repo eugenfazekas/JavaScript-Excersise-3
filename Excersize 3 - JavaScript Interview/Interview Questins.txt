@@ -1,0 +1,95 @@
+1.Diff var vs let:
+
+	var release : begining;
+	let release : 2015;
+	let = block scope;
+	var = function scope;
+	var = gets hoisted top of the function;
+	
+2. ( == ) vs ( === )
+
+		== compare only values; ('1' == 1) //true
+		
+		=== compare type and values; ('1' == 1) // false
+
+3. let vs const
+
+	let= can be reassigned; let l = 1; l=2; log(l) // 1
+	
+	const = can't be reassigned value; const c = 1; c = 2; log(c) //Not allowed
+	
+	Can push in const array;
+	
+4.	Null vs undefined
+
+	Both represent empty value;
+	
+	Declared variable and value is not set = undefined;
+	
+	Null must be set manually;
+	
+	typeof(undefined) => undefined
+	
+	typeof(null) => object
+	
+5.  Inner function ( function() ) equals to window object	
+	
+	arrow function equals to object
+	
+6.  protypal inheritance
+
+	every object have a propertie PROTOTYPE;
+	
+	and every object inherit his parent properties;
+	
+	let car = function(model)  { this.model = model };
+	
+	car.prototype.getModel = function()  { return this.model} ;
+	
+	let toyota = new car('toyota');
+	
+	console.log(toyota.getModel());
+	
+7.  function declaration vs function expression
+
+	function funcD() {
+	
+	console.log('function declaration'));
+	
+	}; 
+	
+	let funcE = function() {
+	
+	console.log('function expression')); //Can't used before declared
+	
+	}; 
+	
+8.   Promises
+
+9.   SetTimeout	  = async function ; and finishing after sync functions.
+
+10.  Clossure
+
+	let obj = function() {
+	let i = 0;
+
+	return {
+		setI(k) {
+					i = k;
+				},
+		getI()   {
+					return i;
+				}
+			}
+	}
+
+	let x = obj();
+
+	x.setI(4);
+	console.log(x.getI());
+	
+	
+	
+	
+	
+ 
