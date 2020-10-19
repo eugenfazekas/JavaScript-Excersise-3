@@ -70,6 +70,9 @@
 
 10.  Clossure
 
+	This is called a JavaScript closure.
+	It makes it possible for a function to have "private" variables.
+
 	let obj = function() {
 	let i = 0;
 
@@ -87,6 +90,18 @@
 
 	x.setI(4);
 	console.log(x.getI());
+	
+11. 	var y = 2 ;
+		
+		var x = function() {
+		
+		console.log(y);  // undefined
+		
+		var y = 1;
+		
+		}
+		
+		x();
 	
 	
 	
