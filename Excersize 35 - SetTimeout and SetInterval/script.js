@@ -1,5 +1,3 @@
-console.log('1');
-
 
 let counter;
 
@@ -11,10 +9,11 @@ function stoptimer() {
     clearTimeout(counter);
   }
 
-  let counter2 = document.getElementById("interval").innerHTML;
+let counter2;
 
 function startinterval() {
-     setInterval( () =>  { counter2 ='Interval' }, 1000);
+    counter2 =  setInterval( () =>  { document.getElementById("interval").innerHTML = 'Interval'; }, 1000);
+     setTimeout( setInterval( () =>  { document.getElementById("interval").innerHTML = ''; }, 2000),1000);
 }
 
 function stoptinterval() {
